@@ -10,12 +10,10 @@ ORDER BY CAR_ID DESC
 ;     
 
 ### 문제  
-USED_GOODS_BOARD와 USED_GOODS_REPLY 테이블에서 2022년 10월에 작성된   
-게시글 제목, 게시글 ID, 댓글 ID, 댓글 작성자 ID, 댓글 내용, 댓글 작성일을 조회하는 SQL문을 작성해주세요.   
-결과는 댓글 작성일을 기준으로 오름차순 정렬해주시고, 댓글 작성일이 같다면 게시글 제목을 기준으로 오름차순 정렬해주세요.  
+![image1](https://user-images.githubusercontent.com/123911778/262185279-70c7e6e8-4d95-47a4-9202-281d64000932.PNG)
 
 ### 결과
-![image1](https://user-images.githubusercontent.com/123911778/261910007-0677c426-da40-486d-a22d-06600299adad.PNG)
+![image2](https://user-images.githubusercontent.com/123911778/262185283-ac789110-bc5c-4b9c-8575-526018ad1c32.PNG)
 
 ### 설명
 2개의 Table에서 데이터를 가져올 때는 테이블 명에 별칭을 붙여서 사용한다.
