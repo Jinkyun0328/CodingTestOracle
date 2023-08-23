@@ -1,13 +1,12 @@
 ### SQL문
-![image1](https://user-images.githubusercontent.com/123911778/262188325-92e64c13-1d51-4fe5-8457-b166d23adf47.PNG)
+![image1](https://user-images.githubusercontent.com/123911778/262565587-5dd00832-5b83-493b-b5da-f5dcb21d15aa.PNG)
 
 ### 문제  
-![image2](https://user-images.githubusercontent.com/123911778/262188326-6e9cc2cd-7e5e-4efc-ae81-f1b72ddd2157.PNG)
+![image2](https://user-images.githubusercontent.com/123911778/262565591-9b34282b-fa55-4951-87d8-0dc27f4f52fc.PNG)
 
 ### 결과
-![image3](https://user-images.githubusercontent.com/123911778/262188327-03165c38-70b4-4e08-8ba0-5c6316097f04.PNG)
+![image3](https://user-images.githubusercontent.com/123911778/262565596-3967dc11-c142-4aa6-8d73-845759b02e00.PNG)
 
 ### 설명
-평균값을 구하는 것은 AVG을 사용하여 구할 수 있고 반올림을 하는 함수는 ROUND이다.
-DAILY_FEE 칼럼에 대해서 AVG을 사용하여 평균을 구하고 ROUND을 사용하여 소수 첫 번째 자리에서 반올림을 했다.
-소수 첫 번째 자리에서 반올림을 하면 소수점까지 출력되므로 ROUND에 0을 입력한다.
+MCDP_CD을 기준으로 APNT_NO의 숫자를 구하려고 한다.     
+조건은 2022년 5월이므로 WHERE에 TO_CHAR을 사용하여 2022-05와 같은지르 확인한다.   
