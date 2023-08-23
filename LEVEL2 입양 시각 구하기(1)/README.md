@@ -1,13 +1,19 @@
 ### SQL문
-![image1](https://user-images.githubusercontent.com/123911778/262188325-92e64c13-1d51-4fe5-8457-b166d23adf47.PNG)
+![image1](https://user-images.githubusercontent.com/123911778/262521205-66bca1af-cdb4-4760-8505-c1fa7bc3c562.PNG)
 
 ### 문제  
-![image2](https://user-images.githubusercontent.com/123911778/262188326-6e9cc2cd-7e5e-4efc-ae81-f1b72ddd2157.PNG)
+![image2](https://user-images.githubusercontent.com/123911778/262521209-e6b5a884-6ff7-4214-9f03-228aec399d2d.PNG)
 
 ### 결과
-![image3](https://user-images.githubusercontent.com/123911778/262188327-03165c38-70b4-4e08-8ba0-5c6316097f04.PNG)
+![image3](https://user-images.githubusercontent.com/123911778/262521210-e9da7b25-1daa-46ec-a2e2-e28a12d14bf9.PNG)
 
 ### 설명
-평균값을 구하는 것은 AVG을 사용하여 구할 수 있고 반올림을 하는 함수는 ROUND이다.
-DAILY_FEE 칼럼에 대해서 AVG을 사용하여 평균을 구하고 ROUND을 사용하여 소수 첫 번째 자리에서 반올림을 했다.
-소수 첫 번째 자리에서 반올림을 하면 소수점까지 출력되므로 ROUND에 0을 입력한다.
+보호소에서 몇 시에 입양이 가장 활발하게 일어나는지 알아보려고 한다.
+각 시간대별로 입양이 몇 건이나 발생했는지 조회하려고 한다.
+
+FROM에서 서브쿼리를 사용하여 09-11-22 11:22:33으로 출력되는 DATE형을 char형으로 변환하였고
+'FMHH24'를 넣어서 시간만을 추출한 후 숫자형으로 변경했다.   
+그럼 hour에는 시간을 나타내는 정수가 저장된다.   
+
+count 함수를 사용하여 hour을 기준으로 카운트하여 출력했고 9시부터 19시 59분까지 발생한 입양을 조회하는 것이므로
+having에 between 함수를 사용하여 조건을 추가한다.    
