@@ -13,3 +13,4 @@ ORDER BY SUM(OS.SALES_AMOUNT * PR.PRICE) DESC, PR.PRODUCT_CODE;
 
 ### 설명
 상품 별 매출액 합계를 출력하려고 한다.   
+오프라인 판매 테이블에서 판매가격과 판매량을 곱한 다음 그것을 code를 그룹으로 더한다.  
