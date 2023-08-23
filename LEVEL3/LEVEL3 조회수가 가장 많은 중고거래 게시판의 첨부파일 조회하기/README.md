@@ -1,17 +1,18 @@
 ### SQL문
-![image1](https://user-images.githubusercontent.com/123911778/262575187-235e74f0-97af-469f-9e58-76714e8680c7.PNG)
+![image1](https://user-images.githubusercontent.com/123911778/262590161-e6ed3b76-7dee-4b92-ac28-dfdb7ab358d9.PNG)
 
 ### 문제  
-![image2](https://user-images.githubusercontent.com/123911778/262575192-76a237e5-ed7c-4332-8b60-b2f734b23a38.PNG)
+![image2](https://user-images.githubusercontent.com/123911778/262590164-f7eefcf7-abec-4267-a1cd-fc628e4eccb5.PNG)
 
 ### 결과
-![image3](https://user-images.githubusercontent.com/123911778/262575194-4dc6626d-039c-486a-b74d-5f7bd290e7aa.PNG)
+![image3](https://user-images.githubusercontent.com/123911778/262590156-8d138c65-f0e1-43f7-a3cd-0d4546031460.PNG)
 
 ### 설명
-조회수는 USED_GOODS_BOARD 테이블에 저장되어 있고 파일명은 used_goods_file 태이블에 저장되어 있다.       
-출력하는 것은 문자열이 연결된 형태로 ORACLE에서는 '||'을 사용하여 문자열을 연결한다.       
-       
-USED_GOODS_BOARD에서 VIEWS 중 최댓값을 가지는 BORAD_ID의 파일주소를 출력하는 것이므로       
-WHERE에서 SELECT문을 사용하여 최댓값을 구하고 이것과 VIEWS가 같은 값인 것을 출력한다.       
+중고 거래 게시물을 3건 이상 등록한 사용자의 데이터를 출력하려고 한다.          
+ORACLE에서 문자열을 연결할 때는 || 연산자를 사용하여 연결한다.       
+휴대폰 전화번호는 3, 4, 4자리로 구분지어서 중간에 -를 넣어 출력한다.       
+substr 함수를 사용하여 TLNO을 잘라서 사용했다.       
 
-출력 결과 위의 2개의 파일이 출력되었다.          
+게시물을 3건 이상 등록한 사용자는 where에서 query을 사용하였다.       
+count 함수를 사용하여 writer_id를 기준으로 게시물의 수를 구했고 출력된 ID와 같은 ID를 가지고 있는        
+user_id와 요구한 행을 출력한다.       
