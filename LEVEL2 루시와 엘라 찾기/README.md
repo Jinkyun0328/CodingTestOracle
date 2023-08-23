@@ -1,13 +1,13 @@
 ### SQL문
-![image1](https://user-images.githubusercontent.com/123911778/262188325-92e64c13-1d51-4fe5-8457-b166d23adf47.PNG)
+![image1](https://user-images.githubusercontent.com/123911778/262509161-d3fa0c7d-83e5-4a06-a3ec-96bbf9981b23.PNG)
 
 ### 문제  
-![image2](https://user-images.githubusercontent.com/123911778/262188326-6e9cc2cd-7e5e-4efc-ae81-f1b72ddd2157.PNG)
+![image2)(https://user-images.githubusercontent.com/123911778/262509158-31c21c46-9654-40f5-bcaf-75d34f617ce3.PNG)
 
 ### 결과
-![image3](https://user-images.githubusercontent.com/123911778/262188327-03165c38-70b4-4e08-8ba0-5c6316097f04.PNG)
+![image3](https://user-images.githubusercontent.com/123911778/262509162-1eaefabe-b233-4658-aa19-7336b8dfe01f.PNG)
 
 ### 설명
-평균값을 구하는 것은 AVG을 사용하여 구할 수 있고 반올림을 하는 함수는 ROUND이다.
-DAILY_FEE 칼럼에 대해서 AVG을 사용하여 평균을 구하고 ROUND을 사용하여 소수 첫 번째 자리에서 반올림을 했다.
-소수 첫 번째 자리에서 반올림을 하면 소수점까지 출력되므로 ROUND에 0을 입력한다.
+이름이 Lucy, Ella, Pickle, Rogan, Sabrina, Mitty인 동물을 검색한다.            
+포함하는 것이 아니라 동일한지를 물어보고 있기 때문에 연산자는 =를 사용하고      
+이 중 하나라도 일치하는지를 물어보기 때문에 or로 연결한다.          
