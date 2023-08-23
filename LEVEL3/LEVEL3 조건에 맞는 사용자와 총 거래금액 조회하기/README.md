@@ -1,17 +1,15 @@
 ### SQL문
-![image1](https://user-images.githubusercontent.com/123911778/262575187-235e74f0-97af-469f-9e58-76714e8680c7.PNG)
+![image1](https://user-images.githubusercontent.com/123911778/262595557-e32012c2-90c8-49b9-a5fe-1db4274a11ae.PNG)
 
 ### 문제  
-![image2](https://user-images.githubusercontent.com/123911778/262575192-76a237e5-ed7c-4332-8b60-b2f734b23a38.PNG)
+![image2](https://user-images.githubusercontent.com/123911778/262595563-2b7cf4c1-c121-4716-8fd9-c14f42d2138e.PNG)
 
 ### 결과
-![image3](https://user-images.githubusercontent.com/123911778/262575194-4dc6626d-039c-486a-b74d-5f7bd290e7aa.PNG)
+![image3](https://user-images.githubusercontent.com/123911778/262595550-8620bef1-3e02-4f51-aef3-143aa74356cc.PNG)
 
 ### 설명
-조회수는 USED_GOODS_BOARD 테이블에 저장되어 있고 파일명은 used_goods_file 태이블에 저장되어 있다.       
-출력하는 것은 문자열이 연결된 형태로 ORACLE에서는 '||'을 사용하여 문자열을 연결한다.       
-       
-USED_GOODS_BOARD에서 VIEWS 중 최댓값을 가지는 BORAD_ID의 파일주소를 출력하는 것이므로       
-WHERE에서 SELECT문을 사용하여 최댓값을 구하고 이것과 VIEWS가 같은 값인 것을 출력한다.       
-
-출력 결과 위의 2개의 파일이 출력되었다.          
+완료된 중고 거래의 총금액이 70만원 이상인 사람을 조회한다.             
+USED_GOODS_BOARD에서 STATUE에 DONE이면서 PRICE의 합이 70만을 넘어가는 것을 찾는다.           
+SELECT에서 A.WRITER_ID와 B.NICKNAME이 같이 나오기 때문에           
+GROUP BY에도 이 두 개가 들어가야 한다.           
+SUM(A.PRICE)가 70만보다 크다는 것은 그룹화 된 것의 조건이기 때문에 HAVING에 적는다.           
