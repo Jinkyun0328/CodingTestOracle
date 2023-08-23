@@ -1,13 +1,13 @@
 ### SQL문
-![image1](https://user-images.githubusercontent.com/123911778/262188325-92e64c13-1d51-4fe5-8457-b166d23adf47.PNG)
+![image1](https://user-images.githubusercontent.com/123911778/262509164-8b73baea-eeb2-439b-a301-b5183c8bcb3e.PNG)
 
 ### 문제  
-![image2](https://user-images.githubusercontent.com/123911778/262188326-6e9cc2cd-7e5e-4efc-ae81-f1b72ddd2157.PNG)
+![image2](https://user-images.githubusercontent.com/123911778/262509167-0c6a5328-05d8-4522-99e1-d0888f0ab277.PNG)
 
 ### 결과
-![image3](https://user-images.githubusercontent.com/123911778/262188327-03165c38-70b4-4e08-8ba0-5c6316097f04.PNG)
+![image3](https://user-images.githubusercontent.com/123911778/262509168-db15d194-4467-452e-9ddc-58688bfa58e8.PNG)
 
 ### 설명
-평균값을 구하는 것은 AVG을 사용하여 구할 수 있고 반올림을 하는 함수는 ROUND이다.
-DAILY_FEE 칼럼에 대해서 AVG을 사용하여 평균을 구하고 ROUND을 사용하여 소수 첫 번째 자리에서 반올림을 했다.
-소수 첫 번째 자리에서 반올림을 하면 소수점까지 출력되므로 ROUND에 0을 입력한다.
+강아지 중에서 이름에 el을 포함하고 있는 튜블을 찾아 아이디와 이름을 출력한다.         
+소문자 el은 문자 중간 또는 끝에 포함되어 있고 대문자는 이름의 시작부분에 있다.        
+따라서 El로 시작하는 문자열도 조건에 추가해준다.          
