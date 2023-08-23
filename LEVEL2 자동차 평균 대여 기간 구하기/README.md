@@ -8,5 +8,16 @@
 ![image3](https://user-images.githubusercontent.com/123911778/262203060-75861317-ea8e-4b2a-a795-c01c64fe40ce.PNG)
 
 ### 설명
-테이블에서 특정 컬럼의 평균을 구하는 함수는 AVG이다. DATEDIFF(END_DATE, START_DATE)은 DATE형의 차를 구하는 함수로여기서는 END_DATE - START_DATE로 대여기간을 구하는 함수이다. 당일에 반납해도 하루의 대여 기간이 생기기 때문에 이 값에 +1을 해주고 AVG 함수를 사용하여 평균을 구한다. 이 값을 소수점 두번째 자리에서 반올림 하므로 값은 소수점 첫번째자리까지 출력된다. 따라서 ROUND 함수에 1을 입력한다.            
+CAR_ID 별로 대여 기간의 평균을 구하려고 한다.          
+Column의 평균은 AVG 함수를 사용하여 구할 수 있다.         
+단 GROUP BY를 하지 않으면 모든 Column에 대해 평균값을 구하기 때문에         
+이 문제처럼 CAR_ID 별로 평균을 구하고 싶으면 CAR_ID로 그룹화해야 한다.         
+
+GROUP BY를 사용했을 때는 조건문으로 WHERE 대신 HAVING을 사용한다.         
+평균대여기간이 7일 이상인 것만 출력하려고 한다.         
+그럼 HAVING에서 AVERAGE_DURATION이 7보다 크다라는 조건을 붙여준다.         
+
+DATEDIFF은 날짜형 자료형 간의 차이를 구하는 함수         
+AVG 컬럼의 평균을 구하는 함수         
+ROUND 반올림         
 
