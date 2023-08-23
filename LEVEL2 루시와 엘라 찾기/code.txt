@@ -1,3 +1,5 @@
-SELECT ROUND(AVG(DAILY_FEE), 0) as AVERAGE_FEE
-    FROM CAR_RENTAL_COMPANY_CAR
-    WHERE CAR_TYPE = 'SUV';
+SELECT ANIMAL_ID, NAME, SEX_UPON_INTAKE
+    FROM ANIMAL_INS
+    WHERE NAME = 'Lucy' or NAME = 'Ella' or NAME = 'Pickle' 
+        or NAME = 'Rogan' or NAME = 'Sabrina' or NAME = 'Mitty'
+    ORDER BY ANIMAL_ID;
