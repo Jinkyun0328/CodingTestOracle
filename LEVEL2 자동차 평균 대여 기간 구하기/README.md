@@ -1,13 +1,23 @@
 ### SQL문
-![image1](https://user-images.githubusercontent.com/123911778/262188325-92e64c13-1d51-4fe5-8457-b166d23adf47.PNG)
+![image1](https://user-images.githubusercontent.com/123911778/262203056-bf67dfa1-3f01-44bf-811a-68b6a7c148bb.PNG)
 
 ### 문제  
-![image2](https://user-images.githubusercontent.com/123911778/262188326-6e9cc2cd-7e5e-4efc-ae81-f1b72ddd2157.PNG)
+![image2](https://user-images.githubusercontent.com/123911778/262203059-22b48b3d-6cba-49c6-8fc2-ab8bdbdcecba.PNG)
 
 ### 결과
-![image3](https://user-images.githubusercontent.com/123911778/262188327-03165c38-70b4-4e08-8ba0-5c6316097f04.PNG)
+![image3](https://user-images.githubusercontent.com/123911778/262203060-75861317-ea8e-4b2a-a795-c01c64fe40ce.PNG)
 
 ### 설명
-평균값을 구하는 것은 AVG을 사용하여 구할 수 있고 반올림을 하는 함수는 ROUND이다.
-DAILY_FEE 칼럼에 대해서 AVG을 사용하여 평균을 구하고 ROUND을 사용하여 소수 첫 번째 자리에서 반올림을 했다.
-소수 첫 번째 자리에서 반올림을 하면 소수점까지 출력되므로 ROUND에 0을 입력한다.
+CAR_ID 별로 대여 기간의 평균을 구하려고 한다.          
+Column의 평균은 AVG 함수를 사용하여 구할 수 있다.         
+단 GROUP BY를 하지 않으면 모든 Column에 대해 평균값을 구하기 때문에         
+이 문제처럼 CAR_ID 별로 평균을 구하고 싶으면 CAR_ID로 그룹화해야 한다.         
+
+GROUP BY를 사용했을 때는 조건문으로 WHERE 대신 HAVING을 사용한다.         
+평균대여기간이 7일 이상인 것만 출력하려고 한다.         
+그럼 HAVING에서 AVERAGE_DURATION이 7보다 크다라는 조건을 붙여준다.         
+
+DATEDIFF은 날짜형 자료형 간의 차이를 구하는 함수         
+AVG 컬럼의 평균을 구하는 함수         
+ROUND 반올림         
+

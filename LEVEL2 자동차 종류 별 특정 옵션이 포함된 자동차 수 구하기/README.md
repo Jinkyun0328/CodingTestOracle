@@ -1,13 +1,21 @@
 ### SQL문
-![image1](https://user-images.githubusercontent.com/123911778/262188325-92e64c13-1d51-4fe5-8457-b166d23adf47.PNG)
+SELECT CAR_TYPE, COUNT(CAR_TYPE) AS CARS            
+FROM CAR_RENTAL_COMPANY_CAR         
+WHERE OPTIONS LIKE '%통풍시트%'         
+    OR OPTIONS LIKE '%열선시트%'         
+    OR OPTIONS LIKE '%가죽시트%'         
+GROUP BY CAR_TYPE         
+ORDER BY CAR_TYPE;         
 
 ### 문제  
-![image2](https://user-images.githubusercontent.com/123911778/262188326-6e9cc2cd-7e5e-4efc-ae81-f1b72ddd2157.PNG)
+![image2](https://user-images.githubusercontent.com/123911778/262203067-e70e9679-9f94-4c37-a851-8538f3df6d97.PNG)
 
 ### 결과
-![image3](https://user-images.githubusercontent.com/123911778/262188327-03165c38-70b4-4e08-8ba0-5c6316097f04.PNG)
+![image3](https://user-images.githubusercontent.com/123911778/262203069-ee017cf0-761f-4499-813c-331726d9ee99.PNG)
 
 ### 설명
-평균값을 구하는 것은 AVG을 사용하여 구할 수 있고 반올림을 하는 함수는 ROUND이다.
-DAILY_FEE 칼럼에 대해서 AVG을 사용하여 평균을 구하고 ROUND을 사용하여 소수 첫 번째 자리에서 반올림을 했다.
-소수 첫 번째 자리에서 반올림을 하면 소수점까지 출력되므로 ROUND에 0을 입력한다.
+'통풍시트, 열선시트, 가죽시트 중 하나 이상의 옵션이 포함된 자동자'를 먼저 구하고         
+그곳에서 자동차 종류 별로 몇 대인지 출력하는 SQL문을 작성한다.         
+
+OPTION에 통풍시트, 열선시트, 가죽시트 중 하나라도 포함하는 것. LIKE를 사용하고 OR로 연결  
+자동차 종류별로 몇 대인이 출력하는 것이므로 COUNT 함수는 CAR_TYPE에 따라 묶어준다.  

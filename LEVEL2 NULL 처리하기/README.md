@@ -1,13 +1,13 @@
 ### SQL문
-![image1](https://user-images.githubusercontent.com/123911778/262188325-92e64c13-1d51-4fe5-8457-b166d23adf47.PNG)
+![image1](https://user-images.githubusercontent.com/123911778/262509620-713e313b-abcb-460b-ab23-466adb7cc6bf.PNG)
 
 ### 문제  
-![image2](https://user-images.githubusercontent.com/123911778/262188326-6e9cc2cd-7e5e-4efc-ae81-f1b72ddd2157.PNG)
+![image2](https://user-images.githubusercontent.com/123911778/262509624-c1e0ec06-7e3a-4de1-af34-816dbef4315e.PNG)
 
 ### 결과
-![image3](https://user-images.githubusercontent.com/123911778/262188327-03165c38-70b4-4e08-8ba0-5c6316097f04.PNG)
+![image3](https://user-images.githubusercontent.com/123911778/262509627-8429f521-3179-4524-8cb1-5fc469abe494.PNG)
 
 ### 설명
-평균값을 구하는 것은 AVG을 사용하여 구할 수 있고 반올림을 하는 함수는 ROUND이다.
-DAILY_FEE 칼럼에 대해서 AVG을 사용하여 평균을 구하고 ROUND을 사용하여 소수 첫 번째 자리에서 반올림을 했다.
-소수 첫 번째 자리에서 반올림을 하면 소수점까지 출력되므로 ROUND에 0을 입력한다.
+테이블에 NULL이 있으면 연산이 산술연산이나 비교연산이 불가능해진다.               
+NULL은 NVL 함수를 사용하여 NULL인 경우 대체되는 데이터를 넣을 수 있다.            
+NVL 함수를 사용하여 name에서 NULL인 곳에 No name을 저장한다.            
