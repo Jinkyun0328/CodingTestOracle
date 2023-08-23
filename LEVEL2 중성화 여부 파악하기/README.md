@@ -1,13 +1,14 @@
 ### SQL문
-![image1](https://user-images.githubusercontent.com/123911778/262188325-92e64c13-1d51-4fe5-8457-b166d23adf47.PNG)
+![image1](https://user-images.githubusercontent.com/123911778/262509640-0fbb0420-5529-43df-88b1-db8ec87cac79.PNG)
 
 ### 문제  
-![image2](https://user-images.githubusercontent.com/123911778/262188326-6e9cc2cd-7e5e-4efc-ae81-f1b72ddd2157.PNG)
+![image2](https://user-images.githubusercontent.com/123911778/262509641-b3dfa5d8-6fc8-4662-b412-5589ddde9ef7.PNG)
 
 ### 결과
-![image3](https://user-images.githubusercontent.com/123911778/262188327-03165c38-70b4-4e08-8ba0-5c6316097f04.PNG)
+![image3](https://user-images.githubusercontent.com/123911778/262509643-cb06d9eb-d9c0-4bf5-a368-2b790642d214.PNG)
 
 ### 설명
-평균값을 구하는 것은 AVG을 사용하여 구할 수 있고 반올림을 하는 함수는 ROUND이다.
-DAILY_FEE 칼럼에 대해서 AVG을 사용하여 평균을 구하고 ROUND을 사용하여 소수 첫 번째 자리에서 반올림을 했다.
-소수 첫 번째 자리에서 반올림을 하면 소수점까지 출력되므로 ROUND에 0을 입력한다.
+중성화 여부를 파악하려고 한다. 중성화된 동물은 Neutered 또는 Sparyed를 포함하고 있다.         
+SEX_UPON_INTAKE에 위의 단어가 포함되어 있는지를 물어보는 것이기 때문에        
+LIKE를 사용하여 포함되어 있는지의 여부를 판단하고        
+CASE WHEN THEN 문을 사용하여 포함되어 있는 경우 O를 출력하고 아니면 X를 출력한다.        
