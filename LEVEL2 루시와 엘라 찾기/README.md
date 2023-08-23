@@ -2,7 +2,7 @@
 ![image1](https://user-images.githubusercontent.com/123911778/262509161-d3fa0c7d-83e5-4a06-a3ec-96bbf9981b23.PNG)
 
 ### 문제  
-![image2)(https://user-images.githubusercontent.com/123911778/262509158-31c21c46-9654-40f5-bcaf-75d34f617ce3.PNG)
+![image2](https://user-images.githubusercontent.com/123911778/262509158-31c21c46-9654-40f5-bcaf-75d34f617ce3.PNG)
 
 ### 결과
 ![image3](https://user-images.githubusercontent.com/123911778/262509162-1eaefabe-b233-4658-aa19-7336b8dfe01f.PNG)
