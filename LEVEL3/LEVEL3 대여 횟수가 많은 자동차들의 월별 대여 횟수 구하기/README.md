@@ -1,15 +1,16 @@
 ### SQL문
-![image1](https://user-images.githubusercontent.com/123911778/262826015-9fab05f1-2ddc-47aa-8356-84e753aa52e7.PNG)
+![image1](https://user-images.githubusercontent.com/123911778/262841432-7028a3c2-d8f0-4cf2-a827-393282aa3f47.PNG)
 
 ### 문제  
-![image2](https://user-images.githubusercontent.com/123911778/262826018-144aca87-f851-48e7-90d8-7157446753e1.PNG)
+![image2](https://user-images.githubusercontent.com/123911778/262841439-a0f9534a-dadb-4a5d-8bf3-486a0ee03a0f.PNG)
 
 ### 결과
-![image3](https://user-images.githubusercontent.com/123911778/262826019-b368f112-2bc5-4503-8673-654c2f04793b.PNG)
+![image3](https://user-images.githubusercontent.com/123911778/262841446-a496314a-2cb5-46a9-bdfa-7852a38c8ea4.PNG)
 
 ### 설명
-CAR_RENTAL_COMPANY_CAR 테이블과 CAR_RENTAL_COMPANY_RENTAL_HISTORY 테이블에서           
-데이터를 가져오므로 A와 B를 CAR_ID를 사용하여 INNER JOIN한다.          
-START_DATE가 2022년 10월이고 CAR_TYPE이 세단인 CAR_ID를 찾으면          
-HISTORY에 서로 중복된 값이 출력된다. 한 번씩만 출력하려면 DISTINCT 함수를 사용하여          
-중복을 제거한 채로 출력한다.          
+8월부터 10월까지 전체 대여 횟수가 5회 이상인 CAR_ID에 대하여 각 월별로 car_id의 대여 횟수를 출력한다.              
+WHERE문에서 서브쿼리를 사용하여 8월 부터 10월까지 대여 횟수가 5회 이상인 CAR_ID만 가져왔고              
+월, CAR_ID를 그룹으로 묶은 후 COUNT 함수를 사용하여 집계했다.                
+
+EXTRACT 함수는 날짜형 자료형에서 연, 월, 일을 추출할 수 있는 함수로              
+MONTH FROM START_DATE을 사용하여 START_DATE에서 월을 가져올 수 있다.              
