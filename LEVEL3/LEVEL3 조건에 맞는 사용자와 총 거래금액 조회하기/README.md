@@ -1,17 +1,15 @@
 ### SQL문
-![image1](https://user-images.githubusercontent.com/123911778/262575187-235e74f0-97af-469f-9e58-76714e8680c7.PNG)
+![image1](https://user-images.githubusercontent.com/123911778/262595557-e32012c2-90c8-49b9-a5fe-1db4274a11ae.PNG)
 
 ### 문제  
-![image2](https://user-images.githubusercontent.com/123911778/262575192-76a237e5-ed7c-4332-8b60-b2f734b23a38.PNG)
+![image2](https://user-images.githubusercontent.com/123911778/262595563-2b7cf4c1-c121-4716-8fd9-c14f42d2138e.PNG)
 
 ### 결과
-![image3](https://user-images.githubusercontent.com/123911778/262575194-4dc6626d-039c-486a-b74d-5f7bd290e7aa.PNG)
+![image3](https://user-images.githubusercontent.com/123911778/262595550-8620bef1-3e02-4f51-aef3-143aa74356cc.PNG)
 
 ### 설명
-조회수는 USED_GOODS_BOARD 테이블에 저장되어 있고 파일명은 used_goods_file 태이블에 저장되어 있다.       
-출력하는 것은 문자열이 연결된 형태로 ORACLE에서는 '||'을 사용하여 문자열을 연결한다.       
-       
-USED_GOODS_BOARD에서 VIEWS 중 최댓값을 가지는 BORAD_ID의 파일주소를 출력하는 것이므로       
-WHERE에서 SELECT문을 사용하여 최댓값을 구하고 이것과 VIEWS가 같은 값인 것을 출력한다.       
-
-출력 결과 위의 2개의 파일이 출력되었다.          
+완료된 중고 거래의 총금액이 70만원 이상인 사람을 조회한다.           
+합을 구할 때는 GROUP BY를 사용하여 그룹을 만들고 집계함수 SUM을 사용하여 합을 구한다.           
+SELECT에 WRITER_ID와 NICKNAME이 출력되기 때문에 GROUP BY에도 이 두 가지를 사용하여 그룹화를 한다.           
+PRICE의 합을 TOTAL_SALES로 출력하고 이 값이 700000 이상인 그룹을 출력하는데           
+그룹화된 데이터의 조건문은 WHERE이 아닌 HAVING에 작성한다.           
