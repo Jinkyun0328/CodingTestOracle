@@ -8,8 +8,8 @@
 ![image3](https://user-images.githubusercontent.com/123911778/262595550-8620bef1-3e02-4f51-aef3-143aa74356cc.PNG)
 
 ### 설명
-완료된 중고 거래의 총금액이 70만원 이상인 사람을 조회한다.             
-USED_GOODS_BOARD에서 STATUE에 DONE이면서 PRICE의 합이 70만을 넘어가는 것을 찾는다.           
-SELECT에서 A.WRITER_ID와 B.NICKNAME이 같이 나오기 때문에           
-GROUP BY에도 이 두 개가 들어가야 한다.           
-SUM(A.PRICE)가 70만보다 크다는 것은 그룹화 된 것의 조건이기 때문에 HAVING에 적는다.           
+완료된 중고 거래의 총금액이 70만원 이상인 사람을 조회한다.           
+합을 구할 때는 GROUP BY를 사용하여 그룹을 만들고 집계함수 SUM을 사용하여 합을 구한다.           
+SELECT에 WRITER_ID와 NICKNAME이 출력되기 때문에 GROUP BY에도 이 두 가지를 사용하여 그룹화를 한다.           
+PRICE의 합을 TOTAL_SALES로 출력하고 이 값이 700000 이상인 그룹을 출력하는데           
+그룹화된 데이터의 조건문은 WHERE이 아닌 HAVING에 작성한다.           
