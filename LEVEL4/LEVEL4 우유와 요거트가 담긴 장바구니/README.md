@@ -1,15 +1,14 @@
 ### SQL문
-![image1](https://user-images.githubusercontent.com/123911778/262826015-9fab05f1-2ddc-47aa-8356-84e753aa52e7.PNG)
+![image1](https://user-images.githubusercontent.com/123911778/263144185-cb75b279-3666-4f90-9378-1f0e800f1030.PNG)
 
 ### 문제  
-![image2](https://user-images.githubusercontent.com/123911778/262826018-144aca87-f851-48e7-90d8-7157446753e1.PNG)
+![image2](https://user-images.githubusercontent.com/123911778/263144189-de619bda-ebe9-49f0-882b-e2ea6b6b49d7.PNG)
 
 ### 결과
-![image3](https://user-images.githubusercontent.com/123911778/262826019-b368f112-2bc5-4503-8673-654c2f04793b.PNG)
+![image3](https://user-images.githubusercontent.com/123911778/263144194-9a28b66b-11e1-4cf6-a082-7e979f75a534.PNG)
 
 ### 설명
-CAR_RENTAL_COMPANY_CAR 테이블과 CAR_RENTAL_COMPANY_RENTAL_HISTORY 테이블에서           
-데이터를 가져오므로 A와 B를 CAR_ID를 사용하여 INNER JOIN한다.          
-START_DATE가 2022년 10월이고 CAR_TYPE이 세단인 CAR_ID를 찾으면          
-HISTORY에 서로 중복된 값이 출력된다. 한 번씩만 출력하려면 DISTINCT 함수를 사용하여          
-중복을 제거한 채로 출력한다.          
+CART_ID가 같으면 같은 장바구니에 담겨있는 것이다.         
+동일한 CART_ID에 요거트와 우유가 동시에 들어있는 CART_ID를 조회하려고 한다.         
+같은 테이블을 INNER JOIN으로 연결하여 조회하고         
+이름이 요거트이면서 동시에 우유인 튜플을 조회한다.           
