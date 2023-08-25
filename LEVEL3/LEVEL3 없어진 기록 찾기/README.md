@@ -1,16 +1,12 @@
 ### SQL문
-![image1](https://user-images.githubusercontent.com/123911778/263132169-81722d7c-a529-48fd-9316-1da1f354aed9.PNG)
+![image1](https://user-images.githubusercontent.com/123911778/263135264-2d092fa5-bbc4-4cbb-bbd6-9b088c2fd39c.PNG)
 
 ### 문제  
-![image2](https://user-images.githubusercontent.com/123911778/263132173-a9854d17-1d11-4d2d-9234-a7124fd3935c.PNG)
+![image2](https://user-images.githubusercontent.com/123911778/263135271-2081642e-fd1d-45fd-bb25-dea14323b6f8.PNG)
 
 ### 결과
-![image3](https://user-images.githubusercontent.com/123911778/263132176-15560c99-ec2d-4c06-b6f7-32b9152c05d8.PNG)
+![image3](https://user-images.githubusercontent.com/123911778/263135274-a8111dd8-2163-4a14-897c-f6ab47434e2c.PNG)
 
 ### 설명
-둘 이상을 등록한 사람을 구한다. HOST_ID의 숫자를 COUNT을 사용하여 집계한 다음    
-HAVING을 사용하여 2 이상인 HOST ID를 반환한다.     
-
-출력하는 것이 ID, NAME, HOST_ID이고 집계하는 컬럼이 HOST_ID이므로 WHERE절에 서브쿼리를 사용하여 구현했다.     
-ID와 NAME은 HOST_ID가 동일할 때 동일한 값을 가지는 것이 아니므로 GROUP BY에서 한번에 집계하지 않고      
-서브쿼리를 사용하였다.         
+입양을 간 기록은 있는데 보호소에 들어온 기록이 없는 동물의 데이터를 조회하려고 한다.   
+OUTS을 기준으로 OUTER JOIN을 실행한 다음 INS의 DATETIME에 값이 없는 행을 출력한다.       
