@@ -1,0 +1,7 @@
+SELECT DISTINCT CAR_ID             
+FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY              
+WHERE TO_CHAR(START_DATE, 'YYYY-MM') = '2022-11'             
+    OR TO_CHAR(END_DATE, 'YYYY-MM') = '2022-11'             
+    OR (TO_CHAR(START_DATE, 'YYYY-MM') < '2022-11'             
+       AND TO_CHAR(END_DATE, 'YYYY-MM') > '2022-11')                          
+ORDER BY CAR_ID ASC;   
