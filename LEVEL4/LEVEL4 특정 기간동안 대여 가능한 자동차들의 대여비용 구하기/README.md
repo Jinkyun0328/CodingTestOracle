@@ -1,11 +1,11 @@
 ### SQL문
-![image1]()
+![image1](https://user-images.githubusercontent.com/123911778/263562609-13d0f801-802f-4b10-a5f5-30c8357b92f4.PNG)
 
 ### 문제  
-![image2]()
+![image2](https://user-images.githubusercontent.com/123911778/263562611-0c443453-773a-4d85-b796-f8479ed87a54.PNG)
 
 ### 결과
-![image3]()
+![image3](https://user-images.githubusercontent.com/123911778/263562613-98d84913-7a46-4335-b92a-4d9bcfdb47a2.PNG)
 
 ### 설명
 CAR_RENTAL_COMPANY_CAR 테이블에는 CAR_TYPE과 하루요금, 옵션 등이 저장되어 있다.
