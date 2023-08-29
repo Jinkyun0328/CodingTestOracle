@@ -1,73 +1,15 @@
 ### SQL문
-![image1](https://user-images.githubusercontent.com/123911778/263562609-13d0f801-802f-4b10-a5f5-30c8357b92f4.PNG)
+![image1](https://user-images.githubusercontent.com/123911778/263882582-484c6e06-529b-49e8-b844-2eb8cc2a616e.PNG)
 
 ### 문제  
-![image2](https://user-images.githubusercontent.com/123911778/263562611-0c443453-773a-4d85-b796-f8479ed87a54.PNG)
+![image2](https://user-images.githubusercontent.com/123911778/263882587-756c2801-e9fc-4ed7-9386-7237b22b8425.PNG)
 
 ### 결과
-![image3](https://user-images.githubusercontent.com/123911778/263562613-98d84913-7a46-4335-b92a-4d9bcfdb47a2.PNG)
+![image3](https://user-images.githubusercontent.com/123911778/263882592-4270d828-0596-401a-a651-92d0cb50342b.PNG)
 
 ### 설명
-CAR_RENTAL_COMPANY_CAR 테이블에는 CAR_TYPE과 하루요금, 옵션 등이 저장되어 있다.               
-CAR_RENTAL_COMPANY_RENTAL_HISTORY 테이블에는 CAR_ID별로 대여시작 날짜와 대여종료 날짜가 저장되어 있다.             
-CAR_RENTAL_COMPANY_DISCOUNT_PLAN 테이블에는 CAR_TYPE 별로 7, 30, 90일 이상일 때의 할인율이 저장되어 있다.             
-
-문제 : CAR_TYPE이 '세단' 또는 'SUV'인 자동차 중 2022년 11월 1일부터 2022년 11월 30일까지 대여가능한 자동차를 고른다.             
-일일 대여 요금에 자동차 종류별 대여기간이 30일 이상인 경우의 할인율을 적용하여 30일간의 대여 금액을 구한다.             
-대여 금액이 50만원 이상 200만원 미만이 되는 경우 이 금액을 출력한다.             
-정렬은 대여 금액, 자동차 종류, 자동차 ID를 기준으로 정렬한다.             
-
-첫번째로 대여가능한 자동차를 구해보자.
-이전에 LEVEL3에서 유사한 문제를 해보았는데 대여중과 대여가능을 모두 표시한 다음 MAX를 취하는 것으로 구했었다.             
-대여중인 경우 WHERE에서 START_DATE가 11이거나 END_DATE가 11이거나 START_DATE가 11보다 작은데 END_DATE가 11보다 큰 경우이다.             
-
-첫번째 SELECT문             
-대여중으로 표시되는 CAR_ID를 출력해보자.             
-
-SELECT DISTINCT CAR_ID             
-FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY              
-WHERE TO_CHAR(START_DATE, 'YYYY-MM') = '2022-11'             
-    OR TO_CHAR(END_DATE, 'YYYY-MM') = '2022-11'             
-    OR (TO_CHAR(START_DATE, 'YYYY-MM') < '2022-11'             
-       AND TO_CHAR(END_DATE, 'YYYY-MM') > '2022-11')                          
-ORDER BY CAR_ID ASC;             
-
-두번째 SELECT문             
-CAR_TYPE이 세단 또는 SUV인 CAR_ID 출력하기             
-
-SELECT CAR_ID, DAILY_FEE             
-FROM CAR_RENTAL_COMPANY_CAR               
-WHERE CAR_TYPE IN ('세단', 'SUV')             
-    AND CAR_ID NOT IN (SELECT DISTINCT CAR_ID             
-                        FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY              
-                        WHERE TO_CHAR(START_DATE, 'YYYY-MM') = '2022-11'             
-                            OR TO_CHAR(END_DATE, 'YYYY-MM') = '2022-11'             
-                            OR (TO_CHAR(START_DATE, 'YYYY-MM') < '2022-11'             
-                               AND TO_CHAR(END_DATE, 'YYYY-MM') > '2022-11'))             
-;             
-
-세번째 SELECT문             
-DAILY_FEE와 30, DISCOUNT_RATE을 곱한 값             
-즉 CAR_RENTAL_COMPANY_CAR 와 CAR_RENTAL_COMPANY_DISCOUNT_PLAN 을 JOIN             
-JOIN 조건은? CAR_TYPE의 일치             
-WHERE의 조건? DURATION_TYPE의 값이 '30일 이상'             
-
-SELECT A.CAR_ID, A.CAR_TYPE,              
-    ROUND(A.DAILY_FEE * 30 * (100 - C.DISCOUNT_RATE)/100, 0) AS FEE             
-FROM CAR_RENTAL_COMPANY_CAR A INNER JOIN CAR_RENTAL_COMPANY_DISCOUNT_PLAN C             
-    ON (A.CAR_TYPE = C.CAR_TYPE)             
-WHERE A.CAR_TYPE IN ('세단', 'SUV')             
-    AND C.DURATION_TYPE = '30일 이상'             
-    AND (A.DAILY_FEE * 30 * (100 - C.DISCOUNT_RATE)/100 >= 500000             
-        AND A.DAILY_FEE * 30 * (100 - C.DISCOUNT_RATE)/100 < 2000000)             
-    AND A.CAR_ID NOT IN (SELECT DISTINCT CAR_ID             
-                        FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY              
-                        WHERE TO_CHAR(START_DATE, 'YYYY-MM') = '2022-11'             
-                            OR TO_CHAR(END_DATE, 'YYYY-MM') = '2022-11'             
-                            OR (TO_CHAR(START_DATE, 'YYYY-MM') < '2022-11'             
-                               AND TO_CHAR(END_DATE, 'YYYY-MM') > '2022-11'))             
-ORDER BY 3 DESC, 2 ASC, 1 DESC             
-;             
-
-
+두 개의 테이블의 컬럼을 합치는 것을 JOIN이라고 한다. 서로 가지고 있는 컬럼이 유사할 때        
+위아래로 붙이는 것을 UNION이라고 한다.        
+컬럼의 이름을 같게 명시한 다음 UNION을 사용하여 위아래로 연결하였고 OFFLINE_SALE 테이블에는 USER_ID가 없기 때문에        
+이 값은 모두 NULL로 처리했다.           
 
