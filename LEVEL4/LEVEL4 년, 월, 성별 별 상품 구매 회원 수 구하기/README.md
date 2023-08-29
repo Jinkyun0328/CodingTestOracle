@@ -1,21 +1,16 @@
 ### SQL문
-![image1]()
+![image1](https://user-images.githubusercontent.com/123911778/263872584-95436b20-b083-47cd-8f3c-e458cec74110.PNG)
 
 ### 문제  
-![image2]()
+![image2](https://user-images.githubusercontent.com/123911778/263872595-b696f92b-8023-4953-91ef-8647dbc56179.PNG)
 
 ### 결과
-![image3]()
+![image3](https://github.com/Jinkyun0328/CodingTestOracle/issues/41)
 
 ### 설명
-문제
-HISTORY를 보고 자동차 종류가 '트럭'인 자동차의 대여 기록에 대해서 대여 기록 별로 FEE을 구하여 기록 ID와 금액 리스트를 출력
-CAR_ID를 보고 CAR_TYPE을 알아야 한다.
-CAR_ID를 보고 해당하는 할인율을 구해야 한다.
-해답에서는 트럭으로 정해져 있으므로 CASE WHEN THEN을 사용하여 각각에 5, 7, 10을 적용했다.
-
-첫 번째 SELECT문
-CAR_RENTAL_COMPANY_RENTAL_HISTORY 테이블을 기반으로 CAR_ID에 상응하는 CAR_TYPE과 대여 기간 출력하기
-
-
-아 나중에 해. 뭐 이딴 게 다 있어
+오라클에서 날짜형 자료형의 년, 월, 일을 추출하는 함수는 EXTRACT()이다.            
+USER_INFO 테이블과 ONLINE_SALE 테이블을 JOIN하여 데이터를 가져오고            
+GENDER가 NULL이 아닌 행을 가져온다.            
+연, 월, 성별마다 유저의 수를 조회하는 것이므로            
+YEAR, MONTH, GENDER을 GROUP BY로 묶고 COUNT을 사용하여 숫자를 센다.            
+여기서 동일한 유저가 물건을 다수 구매했을 수 있으므로 DISTINCT을 사용하여 중복을 제거해준다.              
